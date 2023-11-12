@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'ColfaxAI';
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format('woff2'),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ColfaxAI';
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format('woff2'),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+.main,
+.main input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: 'ColfaxAI', Helvetica, sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-top: 60px;
+}
+.main .icon {
+  width: 100px;
+  margin-bottom: 0%;
+}
+.main h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 1% 0px 40px;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.main input[type='text'] {
+  padding: 8px;
+  border: 1px solid #2eacff;
+  border-radius: 1px;
+  margin-bottom: 8px;
+  outline-color: #2eacff;
+}
+
+.main input[type='number'] {
+  padding: 8px;
+  border: 1px solid #2eacff;
+  border-radius: 1px;
+  margin-bottom: 8px;
+  outline-color: #2eacff;
+  max-width: 32px;
+}
+
+.main select {
+  padding: 12px 16px;
+  border: 1px solid #2eacff;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  outline-color: #2eacff;
+}
+
+.main ::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+.main input[type='submit'] {
+  padding: 12px;
+  color: #fff;
+  background-color: #2eacff;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  max-width: max-content;
+  align-self: center;
+}
+
+.main input[type='range'] {
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.main .result {
+  font-weight: bold;
+  margin-top: 40px;
+  width: 60%;
+}
