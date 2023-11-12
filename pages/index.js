@@ -51,7 +51,6 @@ export default function Home() {
       setResult(data.result);
       setGenieImg('/genie-2.gif');
     } catch (error) {
-      console.error(error);
       alert(error.message);
     }
   }

@@ -63,8 +63,6 @@ export default async function (req, res) {
   }
 
   try {
-    console.log(temperature);
-    // console.log("before fetch",name,number,company,occasion,role,traitOne,traitTwo,like)
     const completion = await openai.createCompletion({
       model: 'text-davinci-003',
       prompt: generatePrompt(
@@ -80,12 +78,10 @@ export default async function (req, res) {
       temperature: temperature,
       max_tokens: 250,
     });
-    console.log(completion.data);
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch (error) {
     // Consider adjusting the error handling logic for your use case
     if (error.response) {
-      console.log('blah');
       console.error(error.response.status, error.response.data);
       res.status(error.response.status).json(error.response.data);
     } else {
