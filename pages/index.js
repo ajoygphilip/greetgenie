@@ -57,6 +57,7 @@ export default function Home() {
   }
 
   const ordinalSuffix = (number) => {
+    // to properly suffix nth occasions.
     if (isNaN(number)) return '';
     if (number % 100 >= 11 && number % 100 <= 13) {
       return 'th';
@@ -76,7 +77,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Wisher</title>
+        <title>Greet Genie</title>
         <link rel="icon" href="/genie.jpg" />
       </Head>
 
@@ -154,7 +155,7 @@ export default function Home() {
             />
             .
           </p>
-          Genie Power Level
+          Genie Magic Level
           <input
             type="range"
             min="1"
