@@ -24,6 +24,7 @@ export default async function (req, res) {
   const like = req.body.like || '';
   const temperature = req.body.temperature / 10 || 0.8;
 
+  // input validations
   if (name.trim().length === 0) {
     res.status(400).json({
       error: {
@@ -113,7 +114,7 @@ function generatePrompt(
   like
 ) {
   if (occasion == 'birthday') {
-    return `Please write a heartfelt and highly creative birthday wishes.
+    return `Please write a heartfelt and highly creative birthday wishes in 50 words.
    
   Name of the person:${name}.
   Two positive adjectives to describe the person: ${traitOne} and  ${traitTwo}.
@@ -123,7 +124,7 @@ function generatePrompt(
   }
 
   if (occasion == 'work anniversary') {
-    return `Please write  a very creative work anniversary message. Provide the following information:
+    return `Please write  a very creative work anniversary message in 50 words. 
     
     Name of the person:${name}.
     Role: ${role}.
@@ -131,9 +132,7 @@ function generatePrompt(
     Two positive adjectives to describe the person: ${traitOne} and  ${traitTwo}.
     Name of the company:${company}. 
     The person loves to:${like}.
-    End with a positive message or wishes for the person.
-    
-   
+    End with a positive message or wishes for the person.  
     `;
   }
 }
